@@ -4,8 +4,9 @@
   "description": "Mon premier fichier",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon -e js,html server.js",
+    "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
   },
   "keywords": [
     "file"
