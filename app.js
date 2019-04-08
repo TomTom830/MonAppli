@@ -1,3 +1,30 @@
+/*
+{
+  "name": "appliweb",
+  "version": "1.0.0",
+  "description": "Mon premier fichier",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "file"
+  ],
+  "author": "Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.18.10",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.4.20",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {}
+}
+
+*/
+
 //datalayerr
 var dataLayer = require('./datalayer/dataLayer.js');
 

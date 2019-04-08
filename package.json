@@ -1,23 +1,17 @@
 {
-  "name": "appliweb",
-  "version": "1.0.0",
-  "description": "Mon premier fichier",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon -e js,html app.js",
+    "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
   },
-  "keywords": [
-    "file"
-  ],
-  "author": "Thomas",
-  "license": "ISC",
+  "main": "app.js",
   "dependencies": {
-    "nodemon": "^1.18.10",
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^3.0.5",
+    "bootstrap": "^4.3.1",
     "express": "^4.16.4",
-    "mongodb": "^3.2.3",
-    "mongoose": "^5.4.20",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {}
+    "mongoose": "^5.4.17",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "nunjucks": "^3.2.0"
+  }
 }
