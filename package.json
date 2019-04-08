@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon -e js,html server.js",
+    "dev": "nodemon -e js,html app.js",
     "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
   },
   "keywords": [
