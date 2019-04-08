@@ -4,9 +4,7 @@
   "description": "Mon premier fichier",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon -e js,html app.js",
-    "dev2": "nodemon -e js,html,nj --watch app --ignore app/static/css --ignore app/static/js ./dev.js"
+    "start": "node app.js"
   },
   "keywords": [
     "file"
@@ -14,6 +12,7 @@
   "author": "Thomas",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^1.18.10",
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
     "mongodb": "^3.2.3",
