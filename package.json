@@ -1,27 +1,20 @@
 {
-  "name": "appliweb",
+  "name": "monappli",
   "version": "1.0.0",
-  "description": "Mon premier fichier",
+  "description": "mettre sur heroku",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "file"
-  ],
-  "author": "Thomas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomTom830/MonAppli.git"
+  },
+  "author": "thomas",
   "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "express": "^4.16.4",
-    "mongodb": "^3.2.3",
-    "mongoose": "^5.4.20",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.18.11"
+  "bugs": {
+    "url": "https://github.com/TomTom830/MonAppli/issues"
   },
-  "engines": {
-    "node": "8.10.0"
-  },
-
-  "devDependencies": {}
+  "homepage": "https://github.com/TomTom830/MonAppli#readme"
 }
