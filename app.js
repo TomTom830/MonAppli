@@ -7,9 +7,6 @@ var dataUserLayer = require('./datalayer/dataUserLayer.js');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var bcrypt = require('bcryptjs');
-var AES = require("crypto-js/aes");
-var SHA256 = require("crypto-js/sha256");
 
 
 //init parser
@@ -104,7 +101,6 @@ app.post("/addTask", function(req, res){
 
 //insert task
 app.post("/Connect", function(req, res){
-    //console.log( "Mot de passe chiffré : "+SHA256("req.body.passwd"));
 
 
     if(req.body && typeof req.body.id !='undefined' && req.body.id!=''
