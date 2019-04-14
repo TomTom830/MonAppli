@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 //init parser
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname)); //Dossier des données statics
+app.use(express.static(__dirname)); //Dossier des données sta
 
 var obj_rech = {auteur:""};
 
