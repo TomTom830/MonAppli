@@ -15,7 +15,6 @@ var dataLayer = {
         client.connect(function(err){
             if(err) throw err;
         
-            //db = client.db("Polytech");
             db = client.db("Users");
             cb();
         });
@@ -29,10 +28,8 @@ var dataLayer = {
 
     //{ projection: { _id: 0, name: 1, address: 1 } }
     getUser : function(projection, cb){
-        console.log("on demande si -> "+projection.id+" existe");
         db.collection("ident").findOne(projection, function(err, result) {
             if (err) throw err;
-            console.log("resultat dans data layer : "+result);
             cb(result);
           });
     },
@@ -47,6 +44,3 @@ var dataLayer = {
 }
 
 module.exports = dataLayer;
-
-//datalayer cest le model
-//Dtset cest in objet metier

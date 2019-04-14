@@ -13,11 +13,9 @@ function mainController($scope, $http) {
     supprime_les_cookies();
 
     $scope.connexion = function(req, res){
-        console.log($scope.InfoUser.id +" "+ $scope.InfoUser.passwd );
         
         $http.post('/Connect',$scope.InfoUser)
         .success(function(data){
-            console.log("ok");
             faire_cookie($scope.InfoUser.id);
             document.getElementsByClassName("message_erreur")[0].style.visibility="hidden";
             $scope.InfoUser = {};
@@ -69,7 +67,6 @@ function mainController($scope, $http) {
     function creerCookie(nom,valeur,jour){
         //Si les jours ont bien été définis
         if (jour){
-            console.log("on met la date");
             //On crée un objet date stockant la date actuelle
             var date = new Date();
             /*On définit la date d'expiration du cookie -
@@ -82,7 +79,6 @@ function mainController($scope, $http) {
         //Si les jours n'ont pas été définis, pas besoin de calcul
         else var exp = '';
         document.cookie = nom+'='+valeur+exp+'; path=/';
-        console.log("cookie créé : "+ document.cookie);
     }
 
     function lireCookie(nom){
@@ -117,7 +113,6 @@ function mainController($scope, $http) {
         var cTableau = document.cookie.split(';');
 
         for(var i=0;i<cTableau.length;i++){
-            console.log("on supprime : "+cTableau[i].substring(0,cTableau[i].indexOf('=')));
             supprimerCookie(cTableau[i].substring(0,cTableau[i].indexOf('=')));
         }
     }

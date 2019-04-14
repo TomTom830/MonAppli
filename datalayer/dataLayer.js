@@ -43,8 +43,20 @@ var dataLayer = {
         });
     },
 
+    deleteList : function(myquery, cb){
+        
+        db.collection("listes").deleteMany(myquery, function(err, obj) {
+            if (err) throw err;
+            console.log("many documents deleted");
+        });
+        db.collection("groupe_liste").deleteOne(myquery, function(err, obj) {
+            if (err) throw err;
+            console.log("1 document deleted");
+            cb();
+        });
+    },
+
     updateTask : function(id_task, laTache, cb){
-        console.log("id : "+id_task+" / tache : "+laTache);
         var myquery = { _id: ObjectId(id_task) };
         var newvalues = { $set: {tache : laTache} };
         db.collection("listes").updateOne(myquery, newvalues, function(err, res) {
@@ -52,10 +64,26 @@ var dataLayer = {
             console.log("1 document updated");
             cb(res);
         });
+    },
+
+    insertList : function(name_list,cb){
+        db.collection("groupe_liste").insertOne(name_list, function(err,result){
+            cb();
+        });
+    },
+
+    getList : function(projection, cb){
+        db.collection("groupe_liste").findOne(projection, function(err, result) {
+            if (err) throw err;
+            cb(result);
+          });
+    },
+
+    getListSet : function(cb){
+        db.collection("groupe_liste").find({}).toArray(function(err, docs){
+            cb(docs);
+        });
     }
 }
 
 module.exports = dataLayer;
-
-//datalayer cest le model
-//Dtset cest in objet metier
